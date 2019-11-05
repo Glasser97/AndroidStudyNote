@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="RunText">
+        <attr name="exampleString" format="string" />
+        <attr name="runTextSize" format="dimension" />
+        <attr name="runTextColor" format="color" />
+        <attr name="backgroundColor" format="color"/>
+        <attr name="isRepeat" format="boolean" />
+        <attr name="startPoint" format="integer"/>
+        <attr name="textDirection" format="integer"/>
+        <attr name="speed" format="integer"/>
+        <attr name="waitTime" format="integer"/>
+    </declare-styleable>
+</resources>

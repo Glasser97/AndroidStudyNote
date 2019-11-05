@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.customview.RunText
+        android:id="@+id/run_text"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voteButton"
+        app:textDirection="0"
+        app:isRepeat="true"
+        app:speed="50"
+        app:startPoint="1"
+        app:runTextSize="20sp"
+        app:backgroundColor="#000000"
+        app:runTextColor="#FFEB3B"/>
+
+    <com.example.customview.VoteButton
+        android:id="@+id/voteButton"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/run_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftString="看好"
+        app:rightString="不看好"
+        app:slashUnderWidth="20dp"
+        app:slashWidth="5dp"
+        app:XRadius="30dp"
+        app:yRadius="30dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
