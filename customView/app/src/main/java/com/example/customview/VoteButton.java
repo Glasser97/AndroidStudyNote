@@ -15,6 +15,8 @@ import android.view.View;
  * TODO: document your custom view class.
  */
 public class VoteButton extends View {
+    int width;
+    int height;
     private String mLeftString; // TODO: use a default from R.string...
     private String mRightString; // TODO: use a default from R.string...
     private int mTextColor = Color.WHITE;
@@ -84,8 +86,8 @@ public class VoteButton extends View {
                 mTextSize);
         rectF.left = 0;
         rectF.top = 0;
-        rectF.right = width;
-        rectF.
+//        rectF.right = width;
+//        rectF.
 
 
         if (a.hasValue(R.styleable.VoteButton_exampleDrawable)) {
@@ -122,6 +124,29 @@ public class VoteButton extends View {
 
     }
 
+//    @Override
+//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec){
+//        height = measuredHeight(heightMeasureSpec);
+//        width = measureWidth(widthMeasureSpec);
+//        setMeasureDimension(width, height);
+//    }
+//
+//    private int measureWidth(int widthMeasureSpec) {
+//        int result;
+//        int specMode = MeasureSpec.getMode(widthMeasureSpec);
+//        int specSize = MeasureSpec.getSize(widthMeasureSpec);
+//        if (specMode == MeasureSpec.EXACTLY) {
+//            result = specSize;
+//        } else {//这是wrap的模式，给一个固定大小
+////            result = (int) getContext().getResources().getDimension(R.dimen.dp_150);
+//            result = buttonString.length() * mTextSize + height * 5 / 3;
+//            if (specMode == MeasureSpec.AT_MOST) {
+//                result = Math.min(result, specSize);
+//            }
+//        }
+//        return result;
+//    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -141,7 +166,7 @@ public class VoteButton extends View {
                 paddingLeft + (contentWidth - mLeftTextWidth) / 2,
                 paddingTop + (contentHeight + mLeftTextHeight) / 2,
                 mLeftTextPaint);
-        canvas.drawRoundRect(rectF,);
+        //canvas.drawRoundRect(rectF,);
         // Draw the example drawable on top of the text.
         if (mExampleDrawable != null) {
             mExampleDrawable.setBounds(paddingLeft, paddingTop,

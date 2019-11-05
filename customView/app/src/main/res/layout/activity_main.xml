@@ -35,5 +35,5 @@
         app:slashUnderWidth="20dp"
         app:slashWidth="5dp"
         app:XRadius="30dp"
-        app:yRadius="30dp"/>
+        app:YRadius="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
