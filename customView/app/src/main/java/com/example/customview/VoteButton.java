@@ -15,8 +15,8 @@ import android.view.View;
  * TODO: document your custom view class.
  */
 public class VoteButton extends View {
-    int width;
-    int height;
+    private int width;
+    private int height;
     private String mLeftString; // TODO: use a default from R.string...
     private String mRightString; // TODO: use a default from R.string...
     private int mTextColor = Color.WHITE;
@@ -90,11 +90,11 @@ public class VoteButton extends View {
 //        rectF.
 
 
-        if (a.hasValue(R.styleable.VoteButton_exampleDrawable)) {
-            mExampleDrawable = a.getDrawable(
-                    R.styleable.VoteButton_exampleDrawable);
-            mExampleDrawable.setCallback(this);
-        }
+//        if (a.hasValue(R.styleable.VoteButton_exampleDrawable)) {
+//            mExampleDrawable = a.getDrawable(
+//                    R.styleable.VoteButton_exampleDrawable);
+//            mExampleDrawable.setCallback(this);
+//        }
 
         a.recycle();
 
