@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,18 +23,45 @@
         app:backgroundColor="#000000"
         app:runTextColor="#FFEB3B"/>
 
+
     <com.example.customview.VoteButton
         android:id="@+id/voteButton"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         app:layout_constraintBottom_toTopOf="@+id/run_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:leftColor="#E91E63"
+        app:rightColor="#3F51B5"
         app:leftString="看好"
         app:rightString="不看好"
+        app:textSize="14sp"
         app:slashUnderWidth="20dp"
-        app:slashWidth="5dp"
-        app:XRadius="30dp"
-        app:YRadius="30dp"/>
+        app:slashWidth="5dp"/>
+
+    <TextView
+        android:id="@+id/kanhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/voteButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bukanhao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/run_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voteButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
