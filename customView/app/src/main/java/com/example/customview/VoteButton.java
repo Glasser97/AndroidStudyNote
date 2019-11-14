@@ -17,9 +17,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * TODO: document your custom view class.
- */
+
 public class VoteButton extends View {
     private int width;
     private int height;
@@ -34,7 +32,6 @@ public class VoteButton extends View {
     private float mTextSize = 12; // TODO: use a default from R.dimen...
     private float mSlashWidth = 5;
     private int middleWall;
-    private Context mContext;
     private VoteClickListener mVoteClickListener;
 
     private TextPaint mLeftTextPaint;
@@ -78,6 +75,7 @@ public class VoteButton extends View {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
+
 
     private void init(AttributeSet attrs, int defStyle) {
         // Load attributes
@@ -190,6 +188,8 @@ public class VoteButton extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        setBackgroundColor(Color.TRANSPARENT);
+        //canvas.drawColor(Color.WHITE);
 
         // TODO: consider storing these as member variables to reduce
         // allocations per draw cycle.
@@ -246,15 +246,10 @@ public class VoteButton extends View {
         canvas.drawPath(rightTriPath,rightColorPaint);
 
 
+
         //绘制文字
         canvas.drawText(mLeftString, paddingLeft + halfH, paddingTop + halfH + mLeftTextHeight+6, mLeftTextPaint);
         canvas.drawText(mRightString,getWidth()-paddingRight-halfH,paddingTop + halfH + mLeftTextHeight+6,mRightTextPaint);
-        // Draw the example drawable on top of the text.
-//        if (mExampleDrawable != null) {
-//            mExampleDrawable.setBounds(paddingLeft, paddingTop,
-//                    paddingLeft + contentWidth, paddingTop + contentHeight);
-//            mExampleDrawable.draw(canvas);
-//        }
     }
 
     @Override
@@ -287,12 +282,12 @@ public class VoteButton extends View {
         blue = blue > 255 ? 255:blue;
         return alpha + (red << 16) + (green << 8) + blue;
     }
-    private double computeLength(int leftNo, int rightNo){
-        double half = 1.0/2.0;
+    private float computeLength(int leftNo, int rightNo){
+        float half = 1.0f/2.0f;
         if(leftNo == 0 || rightNo == 0){
             return half;
         }else{
-            return (double)leftNo/(double)(leftNo+rightNo);
+            return (float) leftNo/(float) (leftNo+rightNo);
         }
     }
 
